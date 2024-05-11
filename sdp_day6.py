@@ -36,7 +36,9 @@ from sklearn.metrics import accuracy_score , confusion_matrix , classification_r
 
 digits = load_digits()
 
-
+st.header("Number predictor")
+uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+st.caption("takes a while to load :cry:")
 
 # print(digits.DESCR)
 
@@ -201,7 +203,6 @@ import numpy as np
 
 from sklearn import datasets
 
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
     # Load the image
